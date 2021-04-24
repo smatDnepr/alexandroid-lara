@@ -30,7 +30,7 @@ class MailContact extends Mailable
      */
     public function build()
     {
-		return $this->from('smat.dnepr@gmail.com')
+		return $this->from('matyushkin.dp.ua@gmail.com')
 					->subject('Заявка с сайта ' . env('APP_URL'))
 					->view('emails.contact')
 					->with([
