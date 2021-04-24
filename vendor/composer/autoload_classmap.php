@@ -78,6 +78,7 @@ return array(
     'App\\Models\\LandingPortfolio' => $baseDir . '/app/Models/LandingPortfolio.php',
     'App\\Models\\LandingPromoSlide' => $baseDir . '/app/Models/LandingPromoSlide.php',
     'App\\Models\\LandingSeoMeta' => $baseDir . '/app/Models/LandingSeoMeta.php',
+    'App\\Models\\MyEmail' => $baseDir . '/app/Models/MyEmail.php',
     'App\\Models\\PagePolitika' => $baseDir . '/app/Models/PagePolitika.php',
     'App\\Models\\Partner' => $baseDir . '/app/Models/Partner.php',
     'App\\Models\\Portfolio' => $baseDir . '/app/Models/Portfolio.php',

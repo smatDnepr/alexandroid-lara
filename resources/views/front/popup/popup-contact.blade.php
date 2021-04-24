@@ -33,10 +33,10 @@
 						</div>
 						<div class="field submit">
 							<div class="btn-wrap">
-								<button class="btn-primary js-btn-send" type="submit">
+								<a class="btn-primary js-btn-send" href="#">
 									<span>{{ __('Отправить') }}</span>
 									<svg class="ico"><use xlink:href="{{ asset('assets/img/ico-send_34x34.svg#Layer_1') }}"></use></svg>
-								</button>
+								</a>
 								<span class="ajax-loader">
 									<i class="fas fa-2x fa-sync-alt fa-spin"></i>
 								</span>

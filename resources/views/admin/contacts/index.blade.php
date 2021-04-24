@@ -60,6 +60,28 @@
 							</div>
 						</div>
 					</div>
+
+					<div style="height: 1px; background: #ced4da; margin: 20px 0 20px 0;"></div>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<label>Куда отправлять почту с заявкой:</label>
+							@for ($i = 0; $i < 4; $i++)
+								<div class="form-group">
+									<input type="text"
+											name="email_{{$i}}"
+											class="form-control @error('email_'.$i) is-invalid @enderror"
+											@if ($myEmails->get($i))
+												value="{{ $myEmails->get($i)->email }}"
+											@else
+												value=""
+											@endif
+									/>
+								</div>
+							@endfor
+						</div>
+					</div>
+
 				</div>
 				<div class="card-footer">
 					<button type="submit" class="btn btn-primary">{{ __('Сохранить') }}</button>
