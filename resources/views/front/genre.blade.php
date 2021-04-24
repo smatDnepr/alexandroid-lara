@@ -58,7 +58,8 @@
 						@php
 							$title   = $item->title;
 							$date    = $item->date;
-							$partner = $item->partner ? $item->partner->title : '';
+							//$partner = $item->partner ? $item->partner->title : '';
+							$partner = $item->partner_title ? $item->partner_title : '';
 							$images  = $item->images;
 							$thumb   = getThumb600($item->images[0]->img);
 						@endphp

@@ -103,7 +103,8 @@
 						@php
 							$title   = $item->portfolio->title;
 							$date    = $item->portfolio->date;
-							$partner = $item->portfolio->partner ? $item->portfolio->partner->title : '';
+							//$partner = $item->portfolio->partner ? $item->portfolio->partner->title : '';
+							$partner = $item->portfolio->partner_title ? $item->portfolio->partner_title : '';
 							$images  = $item->portfolio->images;
 							$thumb   = getThumb600($item->portfolio->images[0]->img);
 						@endphp
