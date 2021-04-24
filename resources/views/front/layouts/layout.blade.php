@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	{!! SEO::generate() !!}
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/all.css') }}">
 </head>
 
@@ -35,7 +36,7 @@
     </div>
 
 
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
 
     <link href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
