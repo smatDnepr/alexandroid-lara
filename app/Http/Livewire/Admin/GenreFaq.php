@@ -12,11 +12,11 @@ class GenreFaq extends Component
 	public $faqs;
 	public $question;
 	public $answer;
-	
-	
+
+
 	protected $listeners = ['startOrderSorting_genre_faq'];
-	
-	
+
+
 	public function mount($genre_id)
 	{
 		$this->genreID  = $genre_id;
@@ -25,8 +25,8 @@ class GenreFaq extends Component
 		$this->answer   = $this->faqs->pluck('answer')->toArray();
 		$this->emit('finishUpdate');
 	}
-	
-	
+
+
 	protected function rules()
 	{
 		return [
@@ -34,17 +34,20 @@ class GenreFaq extends Component
 			'answer.*'   => '',
 		];
 	}
-	
-	
+
+
 	public function addItem()
 	{
 		$maxOpder = $this->faqs->max('order');
 
 		// заполняем 'title' и 'description' для всех языков
-		foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
-			$question[$localeCode] = 'Вопрос - ' . $localeCode;
-			$answer[$localeCode]  = 'Ответ - ' . $localeCode;
-		};
+		// foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
+		// 	$question[$localeCode] = 'Вопрос - ' . $localeCode;
+		// 	$answer[$localeCode]  = 'Ответ - ' . $localeCode;
+		// };
+
+		$question['ru'] = 'Вопрос';
+		$answer['ru']  = 'Ответ';
 
 		ModelsGenreFaq::create([
 			'genre_id' => $this->genreID,
@@ -55,8 +58,8 @@ class GenreFaq extends Component
 
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function updateItem($index, $id)
 	{
 		$validatedData = $this->validate([
@@ -69,15 +72,15 @@ class GenreFaq extends Component
 		$faq->save();
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function deleteItem($id)
 	{
 		ModelsGenreFaq::find($id)->delete();
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function startOrderSorting_genre_faq($objOrder)
 	{
 		foreach ($objOrder as $key => $value) {
@@ -87,8 +90,8 @@ class GenreFaq extends Component
 		}
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
     public function render()
     {
         return view('livewire.admin.genre-faq');

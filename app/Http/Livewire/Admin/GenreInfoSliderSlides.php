@@ -15,11 +15,11 @@ class GenreInfoSliderSlides extends Component
 	public $title;
 	public $text;
 	public $img;
-	
-	
+
+
 	protected $listeners = ['startOrderSorting_genre_info_slider_slides'];
-	
-	
+
+
 	public function mount($genre_id)
 	{
 		$this->genreID = $genre_id;
@@ -29,8 +29,8 @@ class GenreInfoSliderSlides extends Component
 		$this->img     = $this->slides->pluck('img')->toArray();
 		$this->emit('finishUpdate');
 	}
-	
-	
+
+
 	protected function rules()
 	{
 		return [
@@ -39,30 +39,30 @@ class GenreInfoSliderSlides extends Component
 			'img.*'            => '',
 		];
 	}
-	
-	
+
+
 	public function addItem()
 	{
 	    $maxOpder = $this->slides->max('order');
-		
+
 		// заполняем 'title' и 'text' для всех языков
-		foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
-			$title[$localeCode] = 'Заголовок слайда - ' . $localeCode;
-			$text[$localeCode]  = 'Тут будет текст слайда - ' . $localeCode;
-		};
+		// foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
+		// 	$title[$localeCode] = 'Заголовок слайда - ' . $localeCode;
+		// 	$text[$localeCode]  = 'Тут будет текст слайда - ' . $localeCode;
+		// };
 
 	    GenreInfoSliderSlide::create([
 	        'genre_id' => $this->genreID,
 	        'order' => $maxOpder + 1,
 	        'img' => '/assets/img/no-image.svg',
-	        'title' => $title,
-	        'text' => $text,
+	        // 'title' => $title,
+	        // 'text' => $text,
 	    ]);
-		
+
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function updateItem($index, $id)
 	{
 	    $validatedData = $this->validate([
@@ -78,15 +78,15 @@ class GenreInfoSliderSlides extends Component
 		$slide->save();
 	    $this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function deleteItem($slide_id)
 	{
 		GenreInfoSliderSlide::find($slide_id)->delete();
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function startOrderSorting_genre_info_slider_slides($objOrder)
 	{
 		foreach ($objOrder as $key => $value) {
@@ -96,8 +96,8 @@ class GenreInfoSliderSlides extends Component
 		}
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
     public function render()
     {
         return view('livewire.admin.genre-info-slider-slides');

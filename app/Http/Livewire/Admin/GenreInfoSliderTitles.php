@@ -18,10 +18,10 @@ class GenreInfoSliderTitles extends Component
 
 	public function mount($genre_id)
 	{
-		// заполняем 'title' для всех языков
-		foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
-			$title[$localeCode] = 'Заголовок для слайдера - ' . $localeCode;
-		};
+		// // заполняем 'title' для всех языков
+		// foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
+		// 	$title[$localeCode] = 'Заголовок для слайдера - ' . $localeCode;
+		// };
 
 		$this->genreID = $genre_id;
 
@@ -29,7 +29,7 @@ class GenreInfoSliderTitles extends Component
 			'genre_id' => $this->genreID
 		], [
 			'genre_id' => $this->genreID,
-			'title' => $title
+			//'title' => $title
 		]);
 
 		$this->title      = $this->genre->title;
