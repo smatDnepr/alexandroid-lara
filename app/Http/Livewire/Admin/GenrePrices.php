@@ -64,9 +64,9 @@ class GenrePrices extends Component
 	public function updateItem($index, $id)
 	{
 		$validatedData = $this->validate([
-			'title.'.$index       => 'string|nullable',
-			'description.'.$index => 'required',
-			'money.'.$index       => 'required|string',
+			'title.'.$index       => '',
+			'description.'.$index => '',
+			'money.'.$index       => '',
 		]);
 
 		$price = $this->prices->firstWhere('id', $id);

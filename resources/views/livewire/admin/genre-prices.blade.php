@@ -15,7 +15,7 @@
 								@enderror
 							</div>
 							<div class="form-group">
-								<label>{{ __('Деньги') }} *</label>
+								<label>{{ __('Деньги') }}</label>
 								<input type="text" class="form-control @error('money.' . $index) is-invalid @enderror" wire:model.defer="money.{{ $index }}" />
 								@error('money.' . $index)
 									<p class="invalid-feedback">{{ $message }}</p>
@@ -24,7 +24,7 @@
 						</div>
 						<div class="col-sm-5">
 							<div class="form-group">
-								<label>{{ __('Описание прайса') }} *</label>
+								<label>{{ __('Описание прайса') }}</label>
 								<textarea class="form-control @error('description.' . $index) is-invalid @enderror" wire:model.defer="description.{{ $index }}" style="min-height:124px;"></textarea>
 								@error('description.' . $index)
 									<p class="invalid-feedback">{{ $message }}</p>
@@ -51,10 +51,10 @@
 			</div>
 		@endforeach
 	</div>
-	
+
 	<div class="card-footer">
         <a class="btn btn-outline-primary" href="{{ route('admin.genres.index') }}">{{ __('К списку жанров') }}</a>
         <button type="button" class="btn btn-primary" wire:click="addItem()">{{ __('Добавить прайс') }}</button>
     </div>
-	
+
 </div>
