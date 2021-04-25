@@ -285,6 +285,17 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\GoogleAnalytic
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic query()
+ */
+	class GoogleAnalytic extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Landing
  *
  * @property int $id
@@ -481,9 +492,17 @@ namespace App\Models{
 /**
  * App\Models\MyEmail
  *
+ * @property int $id
+ * @property string|null $email
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|MyEmail newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MyEmail newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MyEmail query()
+ * @method static \Illuminate\Database\Eloquent\Builder|MyEmail whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MyEmail whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MyEmail whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MyEmail whereUpdatedAt($value)
  */
 	class MyEmail extends \Eloquent {}
 }

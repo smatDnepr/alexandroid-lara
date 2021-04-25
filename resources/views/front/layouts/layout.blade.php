@@ -6,9 +6,16 @@
 	{!! SEO::generate() !!}
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/all.css') }}">
+	@if ( isset($googleAnalytic) )
+		{!! $googleAnalytic->code_head !!}
+	@endif
 </head>
 
 <body>
+	@if ( isset($googleAnalytic) )
+		{!! $googleAnalytic->code_body !!}
+	@endif
+
     <div class="wrapper">
         <div class="overlay" onclick="javascript:;"></div>
 

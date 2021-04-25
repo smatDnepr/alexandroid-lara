@@ -24,8 +24,8 @@ class GenrePrices extends Component
 		$this->money       = $this->prices->pluck('money')->toArray();
 		$this->emit('finishUpdate');
 	}
-	
-	
+
+
 	protected $listeners = ['startOrderSorting_genre_prices'];
 
 
@@ -44,17 +44,17 @@ class GenrePrices extends Component
 		$maxOpder = $this->prices->max('order');
 
 		// заполняем 'title' и 'description' для всех языков
-		foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
-			$title[$localeCode] = 'Заголовок прайса - ' . $localeCode;
-			$description[$localeCode]  = 'Тут будет описание прайса - ' . $localeCode;
-		};
+		// foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
+		// 	$title[$localeCode] = 'Заголовок прайса - ' . $localeCode;
+		// 	$description[$localeCode]  = 'Тут будет описание прайса - ' . $localeCode;
+		// };
 
 		GenrePrice::create([
 			'genre_id' => $this->genreID,
 			'order' => $maxOpder + 1,
-			'title' => $title,
-			'description' => $description,
-			'money' => 777,
+			//'title' => $title,
+			//'description' => $description,
+			//'money' => 777,
 		]);
 
 		$this->mount($this->genreID);
@@ -66,7 +66,7 @@ class GenrePrices extends Component
 		$validatedData = $this->validate([
 			'title.'.$index       => 'string|nullable',
 			'description.'.$index => 'required',
-			'money.'.$index       => 'required|integer',
+			'money.'.$index       => 'required|string',
 		]);
 
 		$price = $this->prices->firstWhere('id', $id);
@@ -84,8 +84,8 @@ class GenrePrices extends Component
 		GenrePrice::find($id)->delete();
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function startOrderSorting_genre_prices($objOrder)
 	{
 		foreach ($objOrder as $key => $value) {

@@ -6,7 +6,7 @@
 
 @section('content')
 	<section class="content">
-		<form action="{{route('admin.contacts.update')}}" method="post">
+		<form action="{{route('admin.contacts.update')}}" method="post" autocomplete="off">
 			@csrf
 			<div class="card mb-0">
 				<div class="card-body mb-0 livevire-component-card-body-v3">
@@ -69,6 +69,7 @@
 							@for ($i = 0; $i < 4; $i++)
 								<div class="form-group">
 									<input type="text"
+											autocomplete="new-password"
 											name="email_{{$i}}"
 											class="form-control @error('email_'.$i) is-invalid @enderror"
 											@if ($myEmails->get($i))

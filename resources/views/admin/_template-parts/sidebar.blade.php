@@ -52,13 +52,6 @@
                 </li>
 
 				<li class="nav-item">
-                    <a href="{{ route('admin.translates') }}" class="nav-link">
-                        <i class="nav-icon fas fa-globe"></i>
-                        <p>Translations</p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
                     <a href="{{ route('admin.files') }}" class="nav-link">
                         <i class="nav-icon far fa-folder-open"></i>
                         <p>{{ __('Файлы') }}</p>
@@ -93,11 +86,7 @@
                     </a>
                 </li>
 
-
-
-
-
-				<li class="nav-item">
+				<li class="nav-item pb-3 mb-3" style="border-bottom: 1px solid #4f5962;">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
@@ -120,6 +109,24 @@
                         </li>
                     </ul>
                 </li>
+
+				<li class="nav-item">
+                    <a href="{{ route('admin.translates') }}" class="nav-link">
+                        <i class="nav-icon fas fa-globe"></i>
+                        <p>Translations</p>
+                    </a>
+                </li>
+
+				<li class="nav-item">
+                    <a href="{{ route('admin.google-analytics.index') }}" class="nav-link">
+                        <i class="nav-icon fab fa-google"></i>
+                        <p>Google Analytics</p>
+                    </a>
+                </li>
+
+
+
+
 
 
 

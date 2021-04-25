@@ -19,6 +19,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 		Route::get('/politika', \App\Http\Controllers\Admin\PolitikaController::class)->name('admin.politika');
 		Route::get('/contacts', [App\Http\Controllers\Admin\ContactController::class, 'index'])->name('admin.contacts.index');
 		Route::post('/contacts', [App\Http\Controllers\Admin\ContactController::class, 'update'])->name('admin.contacts.update');
+		Route::get('/google-analytics', [App\Http\Controllers\Admin\GoogleAnalyticController::class, 'index'])->name('admin.google-analytics.index');
+		Route::post('/google-analytics', [App\Http\Controllers\Admin\GoogleAnalyticController::class, 'update'])->name('admin.google-analytics.update');
 	});
 
 
