@@ -12,7 +12,7 @@
 								</div>
 								<div class="form-group">
 									<label>{{ __('Ответ') }}:</label>
-									<textarea class="form-control @error('answer.' . $index) is-invalid @enderror" wire:model="answer.{{ $index }}"></textarea>
+									<textarea class="form-control @error('answer.' . $index) is-invalid @enderror" wire:model="answer.{{ $index }}" style="min-height:200px"></textarea>
 								</div>
 							</div>
 							<div class="col-sm-2">
@@ -35,23 +35,23 @@
 				</div>
 			@endforeach
 		</div>
-		
+
 		<div class="card-footer">
 			<a class="btn btn-outline-primary" href="{{ route('admin.genres.index') }}">{{ __('К списку жанров') }}</a>
 			<button type="button" class="btn btn-primary" wire:click="addItem()">{{__('Добавить вопрос и ответ')}}</button>
 		</div>
 	{{-- </form> --}}
-	
+
 	{{-- <script>
 		document.addEventListener('DOMContentLoaded', function() {
 			Livewire.on('startSeoUpdate', function() {
 				$('body').addClass('body-show-overlay');
 			});
-			
+
 			Livewire.on('finishSeoUpdate', function() {
 				setTimeout(function(){$('body').removeClass('body-show-overlay')}, 300)
 			});
-				
+
 			tinymce.init({
 				selector: '#textarea_genre_seo_text',
 				height: (window.innerHeight - 380),
