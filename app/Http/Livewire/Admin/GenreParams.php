@@ -12,23 +12,23 @@ class GenreParams extends Component
 	public $title;
 	public $slug;
 	public $is_published;
-	
-	
+
+
 	public function mount($genre_id)
 	{
 		$this->genre = Genre::find($genre_id);
 		$this->title = $this->genre->title;
 		$this->slug  = $this->genre->slug;
-		$this->is_published  = $this->genre->is_published;
+		$this->is_published  = !! $this->genre->is_published;
 	}
-	
-	
+
+
 	public function render()
 	{
 		return view('livewire.admin.genre-params');
 	}
-	
-	
+
+
 	protected function rules() {
 		return [
 			'title' => ['required'],
@@ -36,15 +36,15 @@ class GenreParams extends Component
 			'is_published'  => ['boolean']
 		];
 	}
-	
-	
+
+
 	protected function messages() {
 		return [
 			'slug.regex' => __('Поле Slug должно состоять только из цифр, латинских букв и знака минус'),
 		];
 	}
-	
-	
+
+
 	public function saveGenreParams()
 	{
 		$validatedData = $this->validate();
