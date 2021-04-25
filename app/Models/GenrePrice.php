@@ -9,13 +9,13 @@ use Spatie\Translatable\HasTranslations;
 class GenrePrice extends Model
 {
     use HasFactory, HasTranslations;
-	
+
 	protected $table = 'genre_prices';
-	
+
 	protected $fillable = ['order', 'title', 'description', 'money', 'genre_id'];
-	
-	public $translatable = ['title', 'description'];
-	
+
+	public $translatable = ['title', 'description', 'money'];
+
 	public function genre()
 	{
 		return $this->belongsTo(Genre::class);

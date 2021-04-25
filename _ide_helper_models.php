@@ -181,7 +181,7 @@ namespace App\Models{
  * @property int $order
  * @property array|null $title
  * @property array|null $description
- * @property string|null $money
+ * @property array|null $money
  * @property int $genre_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -287,9 +287,21 @@ namespace App\Models{
 /**
  * App\Models\GoogleAnalytic
  *
+ * @property int $id
+ * @property string|null $code_head
+ * @property string|null $code_body
+ * @property int $enabled
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic query()
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic whereCodeBody($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic whereCodeHead($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic whereEnabled($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|GoogleAnalytic whereUpdatedAt($value)
  */
 	class GoogleAnalytic extends \Eloquent {}
 }
