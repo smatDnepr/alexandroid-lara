@@ -12,7 +12,7 @@
 								</div>
 								<div class="form-group">
 									<label>{{ __('Ответ') }}:</label>
-									<textarea class="form-control @error('answer.' . $index) is-invalid @enderror" wire:model="answer.{{ $index }}" style="min-height:200px"></textarea>
+									<textarea class="form-control @error('answer.' . $index) is-invalid @enderror" wire:model="answer.{{ $index }}" style="min-height:150px"></textarea>
 								</div>
 							</div>
 							<div class="col-sm-2">
