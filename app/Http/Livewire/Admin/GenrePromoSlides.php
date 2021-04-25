@@ -16,10 +16,10 @@ class GenrePromoSlides extends Component
 	public $text;
 	public $btn_functional;
 	public $btn_link;
-	
+
 	protected $listeners = ['startOrderSorting_genre_promo_slides'];
-	
-	
+
+
 	public function mount($genre_id)
 	{
 		$this->genreID       = $genre_id;
@@ -40,11 +40,11 @@ class GenrePromoSlides extends Component
 				}
 			}, $this->img
 		);
-		
+
 		$this->emit('finishUpdate');
 	}
-	
-	
+
+
 	protected function rules()
 	{
 		return [
@@ -56,31 +56,31 @@ class GenrePromoSlides extends Component
 			'btn_link.*'       => '',
 		];
 	}
-	
-	
+
+
 	public function addItem()
 	{
 	    $maxOpder = $this->slides->max('order');
-		
+
 		// заполняем 'title' и 'text' для всех языков
-		foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
-			$title[$localeCode] = 'Заголовок слайда - ' . $localeCode;
-			$text[$localeCode]  = 'Тут будет текст слайда - ' . $localeCode;
-		};
+		// foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties) {
+		// 	$title[$localeCode] = 'Заголовок слайда - ' . $localeCode;
+		// 	$text[$localeCode]  = 'Тут будет текст слайда - ' . $localeCode;
+		// };
 
 	    GenrePromoSlide::create([
 	        'genre_id' => $this->genreID,
 	        'order' => $maxOpder + 1,
 	        'img' => '/assets/img/no-image.png',
-	        'title' => $title,
-	        'text' => $text,
+	        // 'title' => $title,
+	        // 'text' => $text,
 	        'btn_functional' => 0,
 	    ]);
-		
+
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function updateItem($index, $id)
 	{
 	    $validatedData = $this->validate([
@@ -100,15 +100,15 @@ class GenrePromoSlides extends Component
 		$slide->save();
 	    $this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function deleteItem($slide_id)
 	{
 		GenrePromoSlide::find($slide_id)->delete();
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function startOrderSorting_genre_promo_slides($objOrder)
 	{
 		foreach ($objOrder as $key => $value) {
@@ -118,11 +118,11 @@ class GenrePromoSlides extends Component
 		}
 		$this->mount($this->genreID);
 	}
-	
-	
+
+
 	public function render()
 	{
 	    return view('livewire.admin.genre-promo-slides');
 	}
-	
+
 }
