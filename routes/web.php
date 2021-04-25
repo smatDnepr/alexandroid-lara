@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 
 /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-// Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localize', 'localeSessionRedirect', 'localizationRedirect']], function ()
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localize', 'localizationRedirect']], function ()
 {
 	// admin
