@@ -35,7 +35,7 @@
                     <a href="{{ route('logout') }}" class="nav-link"
                         onclick="event.preventDefault(); this.previousElementSibling.submit();">
                         <i class="nav-icon fas fa-sign-out-alt"></i>
-                        <p>Logout {{ auth()->user()->name }}</p>
+                        <p>Logout &nbsp;{{ auth()->user()->name }}</p>
                     </a>
                 </li>
             </ul>
