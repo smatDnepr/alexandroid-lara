@@ -41,6 +41,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 });
 
 
-
-
 require __DIR__.'/auth.php';
+
+
