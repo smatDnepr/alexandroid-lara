@@ -14,7 +14,7 @@
 								<div class="text">{{$slide->text}}</div>
 								<div class="bottom">
 									@if ($slide->btn_functional == 1)
-										<a class="btn-primary" href="{{$slide->btn_link}}">
+										<a class="btn-primary" href="{{$slide->btn_link}}" target="_blank">
 											<span>{{ __('Портфолио') }}</span>
 										</a>
 									@else
