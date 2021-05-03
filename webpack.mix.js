@@ -40,13 +40,13 @@ mix.copyDirectory('resources/front-assets/img', 'public/assets/img');
 mix.js('resources/front-assets/js/jqueryScrollbar/jquery.scrollbar.js', 'public/assets/js/jqueryScrollbar/jquery.scrollbar.js')
    .styles('resources/front-assets/js/jqueryScrollbar/jquery.scrollbar.css', 'public/assets/js/jqueryScrollbar/jquery.scrollbar.css');
 
-mix.js('resources/front-assets/js/slick/slick.js', 'public/assets/js/slick/slick.js')
-   .styles('resources/front-assets/js/slick/slick.css', 'public/assets/js/slick/slick.css')
-   .copy('resources/front-assets/js/slick/ajax-loader.gif', 'public/assets/js/slick/ajax-loader.gif');
+// mix.js('resources/front-assets/js/slick/slick.js', 'public/assets/js/slick/slick.js')
+//    .styles('resources/front-assets/js/slick/slick.css', 'public/assets/js/slick/slick.css')
+//    .copy('resources/front-assets/js/slick/ajax-loader.gif', 'public/assets/js/slick/ajax-loader.gif');
 
-mix.js('resources/front-assets/js/SmoothScroll.js', 'public/assets/js/SmoothScroll.js')
-   .js('resources/front-assets/js/jquery.smatEqualItemsHeight.js', 'public/assets/js/jquery.smatEqualItemsHeight.js')
-   .js('resources/front-assets/js/jquery.maskedinput-1.4.1.min.js', 'public/assets/js/jquery.maskedinput-1.4.1.min.js')
+//mix.js('resources/front-assets/js/SmoothScroll.js', 'public/assets/js/SmoothScroll.js')
+mix.js('resources/front-assets/js/jquery.smatEqualItemsHeight.js', 'public/assets/js/jquery.smatEqualItemsHeight.js')
+   //.js('resources/front-assets/js/jquery.maskedinput-1.4.1.min.js', 'public/assets/js/jquery.maskedinput-1.4.1.min.js')
    .js('resources/front-assets/js/gsap3/gsap.min.js', 'public/assets/js/gsap3/gsap.min.js')
    .js('resources/front-assets/js/gsap3/ScrollTrigger.min.js', 'public/assets/js/gsap3/ScrollTrigger.min.js')
    .js('resources/front-assets/js/animate.js', 'public/assets/js/animate.js')

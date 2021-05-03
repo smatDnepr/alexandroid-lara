@@ -1,10 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/assets/js/jqueryScrollbar/jquery.scrollbar.js": "/assets/js/jqueryScrollbar/jquery.scrollbar.js",
-    "/assets/js/slick/slick.js": "/assets/js/slick/slick.js",
-    "/assets/js/SmoothScroll.js": "/assets/js/SmoothScroll.js",
     "/assets/js/jquery.smatEqualItemsHeight.js": "/assets/js/jquery.smatEqualItemsHeight.js",
-    "/assets/js/jquery.maskedinput-1.4.1.min.js": "/assets/js/jquery.maskedinput-1.4.1.min.js",
     "/assets/js/gsap3/gsap.min.js": "/assets/js/gsap3/gsap.min.js",
     "/assets/js/gsap3/ScrollTrigger.min.js": "/assets/js/gsap3/ScrollTrigger.min.js",
     "/assets/js/animate.js": "/assets/js/animate.js",
@@ -37,7 +34,5 @@
     "/assets/img/logo-1.svg": "/assets/img/logo-1.svg",
     "/assets/img/logo-2.svg": "/assets/img/logo-2.svg",
     "/assets/img/logo-3.svg": "/assets/img/logo-3.svg",
-    "/assets/js/jqueryScrollbar/jquery.scrollbar.css": "/assets/js/jqueryScrollbar/jquery.scrollbar.css",
-    "/assets/js/slick/slick.css": "/assets/js/slick/slick.css",
-    "/assets/js/slick/ajax-loader.gif": "/assets/js/slick/ajax-loader.gif"
+    "/assets/js/jqueryScrollbar/jquery.scrollbar.css": "/assets/js/jqueryScrollbar/jquery.scrollbar.css"
 }
