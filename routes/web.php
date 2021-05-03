@@ -3,12 +3,17 @@
 use Illuminate\Support\Facades\Route;
 
 
+
+
+Route::get('/admin', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
+
+
 /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localize', 'localizationRedirect']], function ()
 {
 	// admin
 	Route::prefix('admin')->middleware(['role:admin'])->group(function() {
-		Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
+		//Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
 		Route::get('/files', [App\Http\Controllers\Admin\FileController::class, 'index'])->name('admin.files');
 		Route::get('/translates', [App\Http\Controllers\Admin\TranslateController::class, 'index'])->name('admin.translates');
 		Route::get('/partners', [App\Http\Controllers\Admin\PartnerController::class, 'index'])->name('admin.partners');
