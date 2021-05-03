@@ -43,7 +43,7 @@
 					<div class="btn-slider-promo-nav"></div>
 				</div>
 				<a class="btn-top-bottom" data-rel="section_about">
-					<svg class="ico"><use xlink:href="assets/img/ico-arrow-top-bottom.svg#Layer_1"></use></svg>
+					<svg class="ico"><use xlink:href="{{ asset('assets/img/ico-arrow-top-bottom.svg#Layer_1') }}"></use></svg>
 				</a>
 			</div>
 		</div>
