@@ -1,23 +1,18 @@
 [class *='btn-'] {
 	position: relative;
-
 	display: -webkit-inline-box;
 	display: -webkit-inline-flex;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-
 	-webkit-align-content: center;
 	-ms-flex-line-pack: center;
 	align-content: center;
-
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-
 	margin: 0;
 	padding: 0;
 	border: none;
@@ -49,6 +44,7 @@
 	margin-right: 0px;
 }
 
+
 /* ************************************************************************** */
 
 .btn-soc-c30 {
@@ -76,6 +72,7 @@
 .body-mobile-device .btn-soc-c30:active {
 	color: #c73c00;
 }
+
 
 /* ************************************************************************** */
 
@@ -110,6 +107,7 @@
 	color: #ffffff;
 	background-color: #c73c00;
 }
+
 
 /* ************************************************************************** */
 
@@ -165,6 +163,7 @@
 	-o-transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, top 0.3s ease 0s, -o-transform 0.3s ease 0s;
 	transition: opacity 0.3s ease 0s, background-color 0.3s ease 0s, top 0.3s ease 0s, transform 0.3s ease 0s;
 }
+
 .btn-mobile-menu span {
 	display: block;
 	position: relative;
@@ -173,6 +172,7 @@
 	margin: 0 auto;
 	margin-bottom: 5px;
 }
+
 .btn-mobile-menu span::before,
 .btn-mobile-menu span::after {
 	display: block;
@@ -197,7 +197,7 @@
 }
 
 .body-mobile-menu-open .btn-mobile-menu::before,
-.body-mobile-menu-open .btn-mobile-menu::after  {
+.body-mobile-menu-open .btn-mobile-menu::after {
 	opacity: 0;
 	-webkit-transform: scaleX(0);
 	-moz-transform: scaleX(0);
@@ -205,12 +205,15 @@
 	-o-transform: scaleX(0);
 	transform: scaleX(0);
 }
+
 .body-mobile-menu-open .btn-mobile-menu::before {
 	top: -20px;
 }
+
 .body-mobile-menu-open .btn-mobile-menu::after {
 	top: 20px;
 }
+
 .body-mobile-menu-open .btn-mobile-menu span::before {
 	-webkit-transform: rotate(45deg) scaleX(1.2);
 	-moz-transform: rotate(45deg) scaleX(1.2);
@@ -218,8 +221,8 @@
 	-o-transform: rotate(45deg) scaleX(1.2);
 	transform: rotate(45deg) scaleX(1.2);
 	background-color: #2F2F2F;
-
 }
+
 .body-mobile-menu-open .btn-mobile-menu span::after {
 	-webkit-transform: rotate(-45deg) scaleX(1.2);
 	-moz-transform: rotate(-45deg) scaleX(1.2);
@@ -249,6 +252,7 @@
 		top: 11px;
 	}
 }
+
 
 /* ************************************************************************** */
 
@@ -292,6 +296,7 @@
 	box-shadow: none;
 }
 
+
 /* ************************************************************************** */
 
 .btn-slider-promo-nav {
@@ -320,6 +325,7 @@
 	-moz-border-radius: 8px 0 0 8px;
 	border-radius: 8px 0 0 8px;
 }
+
 
 /* ************************************************************************** */
 
@@ -362,6 +368,7 @@
 	color: #c73c00;
 }
 
+
 /* ************************************************************************** */
 
 .btn-top-bottom {
@@ -389,6 +396,7 @@
 .body-mobile-device .btn-top-bottom:active {
 	color: #c73c00;
 }
+
 
 /* ************************************************************************** */
 
@@ -428,9 +436,3 @@
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-
-
-
-
-
-
