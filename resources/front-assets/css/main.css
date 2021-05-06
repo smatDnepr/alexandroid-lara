@@ -992,6 +992,9 @@ footer .group-2 .menu li a {
 .section-slider-promo .slider .item {
 	width: 100vw;
 	height: 100vh;
+	height: -webkit-fill-available;
+	height: -moz-available;
+	height: fill-available;
 	position: relative;
 }
 
