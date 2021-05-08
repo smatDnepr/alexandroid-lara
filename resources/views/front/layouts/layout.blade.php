@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	{!! SEO::generate() !!}
 	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/all.css') }}?v={{ date('YmdGi') }}">
+	{{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/all.css') }}?v={{ date('YmdG') }}"> --}}
+	<link rel="stylesheet" type="text/css" href="{{ mix('assets/css/all.css') }}">
 	@if ( isset($googleAnalytic) )
 		{!! $googleAnalytic->code_head !!}
 	@endif
@@ -68,8 +69,8 @@
     <script type="text/javascript" src="{{ asset('assets/js/jquery.maskedinput-1.4.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/gsap3/gsap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/js/gsap3/ScrollTrigger.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/animate.js') }}?v={{ date('YmdGi') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/js/main.js') }}?v={{ date('YmdGi') }}"></script>
+    <script type="text/javascript" src="{{ mix('assets/js/animate.js') }}"></script>
+    <script type="text/javascript" src="{{ mix('assets/js/main.js') }}"></script>
 </body>
 
 </html>

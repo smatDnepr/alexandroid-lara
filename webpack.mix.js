@@ -53,7 +53,9 @@ mix.js('resources/front-assets/js/SmoothScroll.js', 'public/assets/js/SmoothScro
    .js('resources/front-assets/js/main.js', 'public/assets/js/main.js');
 
 
-
+if (mix.inProduction()) {
+    mix.version();
+}
 
 
 // mix.js([
