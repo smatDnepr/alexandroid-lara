@@ -7,10 +7,10 @@
     <title>Admin panel</title>
 	@livewireStyles
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="admin-assets/plugins/fontawesome-free/css/all.min.css">
-	<link rel="stylesheet" href="admin-assets/plugins/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="admin-assets/dist/css/adminlte.min.css">
-	<link rel="stylesheet" href="admin-assets/style.css">
+    <link rel="stylesheet" href="/admin-assets/plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="/admin-assets/plugins/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/admin-assets/dist/css/adminlte.min.css">
+	<link rel="stylesheet" href="/admin-assets/style.css">
 </head>
 <body class="sidebar-mini layout-navbar-fixed">
 
@@ -33,11 +33,11 @@
     </div>
 
 	@livewireScripts
-    <script src="admin-assets/plugins/jquery/jquery.min.js"></script>
-	<script src="admin-assets/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script src="admin-assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="admin-assets/dist/js/adminlte.min.js"></script>
-	<script src="vendor/tinymce/tinymce.min.js"></script>
-    <script src="admin-assets/script.js"></script>
+    <script src="/admin-assets/plugins/jquery/jquery.min.js"></script>
+	<script src="/admin-assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/admin-assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/admin-assets/dist/js/adminlte.min.js"></script>
+	<script src="/vendor/tinymce/tinymce.min.js"></script>
+    <script src="/admin-assets/script.js"></script>
 </body>
 </html>
